@@ -1,56 +1,75 @@
 /* Estilos generales */
 body {
-    
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #08b58c;
+    background-color: #f0f4f5;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #15df58;
+    background-color: #0ea472;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
 
 h1 {
-    margin: 1;
-}
-h5 {
     margin: 0;
+    font-size: 2.5em;
 }
-img{
-    border-radius: 250%;
-    width: 30%;
-    height: 50%;
+
+h2 {
+    font-size: 1.8em;
+    color: #0ea472;
+    border-bottom: 2px solid #0ea472;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    background-color: #333;
+    background-color: #0ea472;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para enlaces */
 a {
-    color: #4CAF50;
+    color: #0ea472;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #fff;
-    border: 2px solid #4CAF50;
+    background-color: white;
+    border: 2px solid #0ea472;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 a:hover {
-    background-color: #4CAF50;
+    background-color: #0ea472;
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .contact-links {
@@ -60,10 +79,11 @@ a:hover {
     margin-top: 20px;
 }
 
-/* Responsive design */
+/* Diseño responsive */
 @media (max-width: 600px) {
     .contact-links {
         flex-direction: column;
+        gap: 10px;
     }
 
     a {
@@ -71,15 +91,48 @@ a:hover {
         margin-bottom: 10px;
     }
 }
-ol li {
-    margin-bottom: 35px; 
+
+/* Listas */
+ol, ul {
+    padding-left: 40px;
+    margin-bottom: 30px;
 }
 
-ol {
-    padding-left: 30px; 
+ol li, ul li {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    position: relative;
+    padding-left: 20px;
 }
 
-ul li{
-    margin-bottom: 35px; 
+ol li::before, ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em;
+    color: #0ea472;
 }
 
+/* Estilos para las secciones */
+section {
+    margin: 40px 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Transiciones */
+h1, h2, p, li {
+    transition: all 0.3s ease;
+}
+
+h1:hover, h2:hover, p:hover, li:hover {
+    color: #0ea472;
+    transform: scale(1.02);
+}
